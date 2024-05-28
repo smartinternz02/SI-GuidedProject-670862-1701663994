@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title></title>
+    <style>
+        body {
+            background-color: rgb(243, 161, 61);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ensure the body takes up the full height of the viewport */
+            margin: 0; /* Remove default margin */
+        }
+        .content {
+            text-align: center;
+            color: rgb(24, 26, 26);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h6>
+            <form action="/predict" method="post">
+                <h1>Finding the Cluster</h1>
+                <br>
+                <h2>Please Enter your BMI & Charges</h2>
+                <label for="BMI">BMI:</label><br>
+                <input type="text" id="BMI" name="BMI" placeholder="BMI" required="required" /><br><br>
+                <label for="Charges">Charges:</label><br>
+                <input type="text" id="Charges" name="Charges" placeholder="Charges" required="required" /><br><br>
+                <input type="submit" value="Submit">
+            </form>
+            <br>
+        </h6>
+        <div>{{ prediction_text }}</div>
+    </div>
+</body>
+</html>
